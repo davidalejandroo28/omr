@@ -466,3 +466,43 @@ static inline bool isPowerOf2(intptr_t input)
 #undef IN_BITMANIP_H
 
 #endif // BITMANIP_H
+
+
+/*
+#include <iostream>
+#include <stdexcept>
+
+
+
+namespace infra {
+
+
+    static inline int32_t log2(int32_t x) {
+        if(x == 0){
+            return -1;
+        }
+        if(x < 0){
+            std::cerr << "undefined" << std::endl;
+            return -1;
+        }
+        return 31 - __builtin_clz(x);
+    }
+
+    static inline int64_t log2(int64_t x) {
+        if(x == 0){
+            return -1;
+        }
+        if(x < 0){
+            std::cerr << "undefined" << std::endl;
+            return -1;
+
+        }
+        return 63 - __builtin_clzll(x);
+    }
+}
+#endif // INFRA_BIT_HPP
+
+*/
+
+
+
